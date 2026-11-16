@@ -1,22 +1,7 @@
 # Flask App: Docker + Kubernetes Deployment
 
-A small Flask REST app, containerized with Docker and deployed on Kubernetes (3 replicas behind a NodePort Service).
+A small Flask REST app, containerized with Docker and deployed on Kubernetes 
 
-## Project structure
-
-```
-.
-├── app.py             # Flask application
-├── requirements.txt   # Python dependencies
-├── Dockerfile         # Image definition
-├── .dockerignore
-├── deployment.yaml    # Kubernetes Deployment (3 replicas, probes, resource limits)
-├── service.yaml       # Kubernetes Service (NodePort)
-├── REPORT.md          # Short technical report
-└── DEMO_SCRIPT.md     # Script for the recorded demo
-```
-
-Endpoints: `GET /` (message, pod hostname, version) and `GET /health`.
 
 ## Prerequisites
 
@@ -136,14 +121,3 @@ git remote add origin https://github.com/<your-username>/<repo-name>.git
 git push -u origin main
 ```
 
-Add a `screenshots/` folder with your evidence before the final push.
-
-## Evidence checklist
-
-- [ ] `docker build` output
-- [ ] `docker images` and `docker ps`
-- [ ] Browser/curl showing the app at `localhost:5000`
-- [ ] `kubectl get deployments,pods,services`
-- [ ] App reachable through the Service (different `pod_hostname` values)
-- [ ] Scaling / self-healing screenshot
-- [ ] Demo video link
